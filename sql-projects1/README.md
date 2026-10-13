@@ -37,4 +37,4 @@ The core of the project involves answering 11 specific business questions to ext
 11. **Shift Analysis**: Used a CTE and `CASE` statement to bucket sales into specific shifts (Morning, Afternoon, Evening) and counted total orders per shift.
 
 ## Conclusion
-This project provides a solid foundation for understanding customer purchasing behaviors, peak sales periods, and high-value demographic segments within a retail environment. The use of advanced SQL functions ensures that the queries are both scalable and efficient for larger datasets.
+This project provides a solid foundation for understanding customer purchasing behaviors, peak sales periods, and high-value demographic segments within a retail environment. The use of advanced SQL functions ensures that the queries are both scalable and efficient for larger datasets..
