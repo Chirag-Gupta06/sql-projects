@@ -217,7 +217,7 @@ SELECT
     EXTRACT(MONTH FROM sale_date) as month,
     AVG(total_sale) as avg_sale,
     RANK() OVER(PARTITION BY EXTRACT(YEAR FROM sale_date) ORDER BY AVG(total_sale) DESC) as rank
-FROM retail_sales
+FROM retail_sale
 GROUP BY 1, 2
 ) as t1
 WHERE rank = 1
@@ -228,7 +228,7 @@ WHERE rank = 1
 SELECT 
     customer_id,
     SUM(total_sale) as total_sales
-FROM retail_sales
+FROM retail_sale
 GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 5
@@ -240,7 +240,7 @@ LIMIT 5
 SELECT 
     category,    
     COUNT(DISTINCT customer_id) as cnt_unique_cs
-FROM retail_sales
+FROM retail_sale
 GROUP BY category
 
 
@@ -257,7 +257,7 @@ SELECT *,
         WHEN EXTRACT(HOUR FROM sale_time) BETWEEN 12 AND 17 THEN 'Afternoon'
         ELSE 'Evening'
     END as shift
-FROM retail_sales
+FROM retail_sale
 )
 SELECT 
     shift,
